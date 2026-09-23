@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#060F2E" />
+  <meta name="description" content="Based Dog is here! Pure meme energy, fearless vibes, and one mission: take the charts to the moon." />
+  <title>Based Dog ($BASEDDOG)</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mint: "#01C990",
+            night: "#060F2E",
+            ink: "#07090f",
+            hill: "#19225B",
+          },
+          fontFamily: {
+            display: ["Fredoka", "system-ui", "sans-serif"],
+            body: ["Outfit", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    ::selection { background: #01C990; color: #04140f; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      font-family: Outfit, system-ui, sans-serif;
+      background: #060F2E;
+    }
+    h1, h2, h3, .font-display { font-family: Fredoka, system-ui, sans-serif; }
+    section[id] { scroll-margin-top: 5.5rem; }
+
+    .night-photo {
+      position: fixed;
+      inset: 0;
+      z-index: -30;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+    .night-veil {
+      position: fixed;
+      inset: 0;
+      z-index: -20;
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(25, 34, 91, 0.55), transparent 58%),
+        linear-gradient(180deg, rgba(6, 15, 46, 0.55) 0%, rgba(6, 15, 46, 0.78) 38%, rgba(6, 15, 46, 0.9) 100%);
+    }
+    .spark {
+      transform-origin: center;
+      animation: twinkle 3.2s ease-in-out infinite;
+    }
+    .spark:nth-child(3n) { animation-duration: 4.4s; }
+    .spark:nth-child(3n + 1) { animation-duration: 2.6s; animation-delay: 0.4s; }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+    .ball {
+      animation: ball 2.6s ease-in-out infinite;
+      box-shadow: 0 0 18px rgba(1, 201, 144, 0.85);
+    }
+    @keyframes ball {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .ticker { animation: ticker 32s linear infinite; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .btn-mint {
+      background: #01C990;
+      color: #04140f;
+      box-shadow: 0 10px 30px rgba(1, 201, 144, 0.28);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-mint:hover {
+      background: #19d9a6;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(1, 201, 144, 0.42);
+    }
+    .btn-ghost {
+      color: #fff;
+      box-shadow: inset 0 0 0 1.5px #01C990;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .btn-ghost:hover {
+      background: #01C990;
+      color: #04140f;
+      transform: translateY(-2px);
+    }
+    .nav-link {
+      background-image: linear-gradient(#01C990, #01C990);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 0 2px;
+      transition: background-size 0.25s ease, color 0.2s ease;
+    }
+    .nav-link:hover { background-size: 100% 2px; color: #01C990; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #060F2E; }
+    ::-webkit-scrollbar-thumb { background: #01C990; border-radius: 99px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .spark, .ball, .ticker { animation: none; }
+    }
+  </style>
+</head>
+<body class="font-body text-white antialiased">
+  <img src="banner.jpg" alt="" class="night-photo" />
+  <div class="night-veil" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed inset-0 -z-10" aria-hidden="true">
+    <svg class="h-full w-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g fill="#ffffff">
+        <polygon class="spark" points="90,70 94,82 106,86 94,90 90,102 86,90 74,86 86,82" />
+        <polygon class="spark" points="220,150 223,160 233,163 223,166 220,176 217,166 207,163 217,160" />
+        <polygon class="spark" points="360,60 365,76 381,81 365,86 360,102 355,86 339,81 355,76" />
+        <polygon class="spark" points="520,180 523,190 533,193 523,196 520,206 517,196 507,193 517,190" />
+        <polygon class="spark" points="680,80 684,94 698,98 684,102 680,116 676,102 662,98 676,94" />
+        <polygon class="spark" points="840,200 843,210 853,213 843,216 840,226 837,216 827,213 837,210" />
+        <polygon class="spark" points="980,50 985,68 1003,73 985,78 980,96 975,78 957,73 975,68" />
+        <polygon class="spark" points="1140,160 1144,174 1158,178 1144,182 1140,196 1136,182 1122,178 1136,174" />
+        <polygon class="spark" points="1300,90 1304,104 1318,108 1304,112 1300,126 1296,112 1282,108 1296,104" />
+        <polygon class="spark" points="160,420 163,430 173,433 163,436 160,446 157,436 147,433 157,430" />
+        <polygon class="spark" points="430,520 434,534 448,538 434,542 430,556 426,542 412,538 426,534" />
+        <polygon class="spark" points="760,460 763,470 773,473 763,476 760,486 757,476 747,473 757,470" />
+        <polygon class="spark" points="1040,540 1044,554 1058,558 1044,562 1040,576 1036,562 1022,558 1036,554" />
+        <polygon class="spark" points="1260,400 1264,414 1278,418 1264,422 1260,436 1256,422 1242,418 1256,414" />
+        <polygon class="spark" points="300,700 303,710 313,713 303,716 300,726 297,716 287,713 297,710" />
+        <polygon class="spark" points="900,680 904,694 918,698 904,702 900,716 896,702 882,698 896,694" />
+      </g>
+    </svg>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-mint/25 bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-5">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo.png" alt="" width="600" height="600" class="h-11 w-11" />
+        <span>
+          <span class="block font-display text-lg leading-none tracking-wide">Based Dog</span>
+          <span class="mt-1 block text-[11px] font-semibold tracking-[0.2em] text-mint">$BASEDDOG</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex" aria-label="Primary">
+        <a class="nav-link" href="#about">Mission</a>
+        <a class="nav-link" href="#how-to-buy">How to Buy</a>
+        <a class="nav-link" href="#chart">Chart</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <a href="https://t.me/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on Telegram" class="hidden h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/15 transition hover:ring-mint lg:block">
+          <img src="tg.png" alt="" width="975" height="997" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="hidden h-10 w-10 overflow-hidden rounded-xl bg-black ring-1 ring-white/15 transition hover:ring-mint lg:block">
+          <img src="x.png" alt="" width="554" height="554" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint hidden items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold md:inline-flex">
+          Buy Now
+        </a>
+        <button id="menuBtn" type="button" class="grid h-10 w-10 place-items-center rounded-xl border border-white/15 md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <svg id="iconOpen" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+          <svg id="iconClose" viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink/95 px-5 py-4 md:hidden">
+      <nav class="grid gap-3 text-base font-medium" aria-label="Mobile">
+        <a href="#about">Mission</a>
+        <a href="#how-to-buy">How to Buy</a>
+        <a href="#chart">Chart</a>
+      </nav>
+      <div class="mt-4 flex items-center gap-3">
+        <a href="https://t.me/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on Telegram" class="h-11 w-11 overflow-hidden rounded-full ring-1 ring-white/15">
+          <img src="tg.png" alt="" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="h-11 w-11 overflow-hidden rounded-xl bg-black ring-1 ring-white/15">
+          <img src="x.png" alt="" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex flex-1 items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative" aria-label="Based Dog banner">
+      <div class="relative">
+        <img src="banner.jpg" width="2448" height="816" alt="Based Dog sitting in a dark night field under stars and a crescent moon" class="block h-auto w-full" />
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-night sm:h-32"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto -mt-8 max-w-6xl px-5 sm:-mt-16 md:-mt-28">
+        <div class="relative overflow-hidden rounded-[2rem] border border-mint/30 bg-ink/90 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.5)] backdrop-blur-md sm:p-8 lg:p-12">
+          <div class="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-mint/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:text-left">
+            <img src="logo.png" width="600" height="600" alt="Based Dog logo" class="w-32 shrink-0 drop-shadow-[0_0_28px_rgba(1,201,144,0.45)] sm:w-40" />
+            <div class="min-w-0 flex-1">
+              <p class="inline-flex items-center gap-2 rounded-full border border-mint/30 bg-mint/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-mint">
+                <span class="relative flex h-2 w-2" aria-hidden="true">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-70 motion-reduce:hidden"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-mint"></span>
+                </span>
+                Solana · $BASEDDOG
+              </p>
+              <h1 class="mt-4 flex items-center justify-center gap-3 font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl md:justify-start">
+                Based Dog
+                <span class="ball mt-2 inline-block h-4 w-4 rounded-full bg-mint sm:h-5 sm:w-5" aria-hidden="true"></span>
+              </h1>
+              <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl md:mx-0">
+                Based Dog is here! Pure meme energy, fearless vibes, and one mission: take the charts to the moon.
+              </p>
+              <div class="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center md:justify-start">
+                <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
+                  Buy Now
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
+                  Chart
+                </a>
+                <div class="flex items-center justify-center gap-2.5 sm:ml-1">
+                  <a href="https://t.me/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on Telegram" class="h-12 w-12 overflow-hidden rounded-full ring-1 ring-white/15 transition hover:ring-mint">
+                    <img src="tg.png" alt="" class="h-full w-full object-cover" />
+                  </a>
+                  <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="h-12 w-12 overflow-hidden rounded-2xl bg-black ring-1 ring-white/15 transition hover:ring-mint">
+                    <img src="x.png" alt="" class="h-full w-full object-cover" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-col gap-3 rounded-2xl border border-white/10 bg-black/50 p-3 sm:flex-row sm:items-center sm:justify-between sm:pl-4">
+                <div class="min-w-0 text-left">
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-mint">Contract address</p>
+                  <p id="caValue" class="truncate font-mono text-base text-white sm:text-lg">TBA</p>
+                </div>
+                <button id="copyBtn" type="button" class="btn-ghost shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold">
+                  Copy
+                </button>
+              </div>
+              <p id="copyStatus" class="sr-only" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-10 overflow-hidden border-y border-white/10 bg-black/40 py-3" aria-hidden="true">
+      <div class="ticker flex w-max">
+        <p class="flex items-center gap-8 px-4 font-display text-sm tracking-[0.18em] text-white/80">
+          <span>BASED DOG</span><span class="text-mint">●</span>
+          <span>PURE MEME ENERGY</span><span class="text-mint">●</span>
+          <span>FEARLESS VIBES</span><span class="text-mint">●</span>
+          <span>$BASEDDOG</span><span class="text-mint">●</span>
+          <span>TO THE MOON</span><span class="text-mint">●</span>
+          <span>SOLANA</span><span class="text-mint">●</span>
+        </p>
+        <p class="flex items-center gap-8 px-4 font-display text-sm tracking-[0.18em] text-white/80">
+          <span>BASED DOG</span><span class="text-mint">●</span>
+          <span>PURE MEME ENERGY</span><span class="text-mint">●</span>
+          <span>FEARLESS VIBES</span><span class="text-mint">●</span>
+          <span>$BASEDDOG</span><span class="text-mint">●</span>
+          <span>TO THE MOON</span><span class="text-mint">●</span>
+          <span>SOLANA</span><span class="text-mint">●</span>
+        </p>
+      </div>
+    </div>
+
+    <section id="about" class="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-mint">The night field</p>
+        <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">One dog. One mission.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-white/75">
+          The field is dark, the stars are out, and Based Dog is already sitting in the middle of it — graphic, fearless, and done waiting. This is pure meme energy with a Solana heartbeat. No side quests. The chart is the sky, and the moon is the only finish line.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <article class="rounded-[1.75rem] border border-white/10 bg-ink/80 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-mint/50">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15">
+            <svg viewBox="0 0 64 64" class="h-7 w-7 fill-mint" aria-hidden="true">
+              <circle cx="16" cy="20" r="6" />
+              <circle cx="32" cy="14" r="6.5" />
+              <circle cx="48" cy="20" r="6" />
+              <ellipse cx="32" cy="40" rx="14" ry="12" />
+            </svg>
+          </span>
+          <h3 class="mt-5 font-display text-2xl">Pure meme energy</h3>
+          <p class="mt-2 leading-relaxed text-white/70">A white dog, a mint ball, and a grin that does not blink. $BASEDDOG is the joke and the conviction, posted straight onto the chain.</p>
+        </article>
+        <article class="rounded-[1.75rem] border border-white/10 bg-ink/80 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-mint/50">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15">
+            <svg viewBox="0 0 64 64" class="h-7 w-7" aria-hidden="true">
+              <path fill="#01C990" d="M32 6l3.2 10.2L46 18l-8.4 6.4L40.6 36 32 29.2 23.4 36l3-11.6L18 18l10.8-1.8z" />
+            </svg>
+          </span>
+          <h3 class="mt-5 font-display text-2xl">Fearless vibes</h3>
+          <p class="mt-2 leading-relaxed text-white/70">Night field. No porch light. Based Dog holds the line while the timeline barks. Fearless is the whole personality.</p>
+        </article>
+        <article class="rounded-[1.75rem] border border-white/10 bg-ink/80 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-mint/50">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15">
+            <svg viewBox="0 0 64 64" class="h-7 w-7" aria-hidden="true">
+              <path fill="#f4f7ff" d="M28 14a16 16 0 1 0 16 20 13 13 0 0 1-16-20z" />
+              <circle cx="46" cy="16" r="3" fill="#01C990" />
+            </svg>
+          </span>
+          <h3 class="mt-5 font-display text-2xl">To the moon</h3>
+          <p class="mt-2 leading-relaxed text-white/70">One mission, written in the stars above the field: take the charts to the moon. Pack up your SOL and run with it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="mx-auto max-w-6xl px-5 pb-20 md:pb-28">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-mint">Solana</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">How to Buy</h2>
+          <p class="mt-4 text-lg leading-relaxed text-white/75">
+            Four steps to swap SOL for $BASEDDOG. Same fearless energy, pointed at the chart.
+          </p>
+        </div>
+        <button id="copyBtnAlt" type="button" class="btn-ghost inline-flex items-center justify-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-semibold">
+          Copy CA · <span class="font-mono text-mint">TBA</span>
+        </button>
+      </div>
+
+      <ol class="relative mt-12 grid gap-5 md:grid-cols-4">
+        <div class="pointer-events-none absolute left-[12%] right-[12%] top-7 hidden h-px bg-mint/40 md:block" aria-hidden="true"></div>
+        <li class="relative rounded-[1.75rem] border border-white/10 bg-ink/85 p-6 backdrop-blur-sm">
+          <div class="relative z-10 grid h-14 w-14 place-items-center rounded-full bg-ink font-display text-lg text-mint ring-2 ring-mint">01</div>
+          <h3 class="mt-5 font-display text-2xl">Get a wallet</h3>
+          <p class="mt-2 text-sm leading-relaxed text-white/70">Install Phantom or Solflare and create a Solana wallet. Write the recovery phrase down offline — that phrase is the leash.</p>
+        </li>
+        <li class="relative rounded-[1.75rem] border border-white/10 bg-ink/85 p-6 backdrop-blur-sm">
+          <div class="relative z-10 grid h-14 w-14 place-items-center rounded-full bg-ink font-display text-lg text-mint ring-2 ring-mint">02</div>
+          <h3 class="mt-5 font-display text-2xl">Load SOL</h3>
+          <p class="mt-2 text-sm leading-relaxed text-white/70">Buy SOL and send it to your wallet. SOL pays for the swap, and a little extra covers the network fee.</p>
+        </li>
+        <li class="relative rounded-[1.75rem] border border-white/10 bg-ink/85 p-6 backdrop-blur-sm">
+          <div class="relative z-10 grid h-14 w-14 place-items-center rounded-full bg-ink font-display text-lg text-mint ring-2 ring-mint">03</div>
+          <h3 class="mt-5 font-display text-2xl">Swap for $BASEDDOG</h3>
+          <p class="mt-2 text-sm leading-relaxed text-white/70">Hit Buy Now, connect your wallet, and swap SOL into $BASEDDOG. Match the contract address before you confirm.</p>
+        </li>
+        <li class="relative rounded-[1.75rem] border border-mint/40 bg-ink/85 p-6 shadow-[0_0_40px_rgba(1,201,144,0.12)] backdrop-blur-sm">
+          <div class="relative z-10 grid h-14 w-14 place-items-center rounded-full bg-mint font-display text-lg text-ink ring-2 ring-mint">04</div>
+          <h3 class="mt-5 font-display text-2xl">Confirm and send it</h3>
+          <p class="mt-2 text-sm leading-relaxed text-white/70">Approve the trade in your wallet. When $BASEDDOG lands, open the chart. The mission is the moon.</p>
+        </li>
+      </ol>
+
+      <div class="mt-8 flex flex-col items-start justify-between gap-4 rounded-[1.75rem] border border-mint/25 bg-mint/10 px-6 py-5 sm:flex-row sm:items-center">
+        <p class="text-white/85">Contract stays <span class="font-mono font-semibold text-mint">TBA</span>. Copy it, then buy with the pack.</p>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-lg">
+          Buy Now
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section id="chart" class="mx-auto max-w-6xl px-5 pb-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-mint">Dexscreener</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Chart</h2>
+          <p class="mt-4 max-w-xl text-lg text-white/75">The live $BASEDDOG chart, parked under the same night sky. Watch the field move.</p>
+        </div>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 self-start rounded-full px-6 py-3 font-display text-lg">
+          Chart
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-8 overflow-hidden rounded-[1.75rem] border border-mint/25 bg-black shadow-[0_0_80px_rgba(1,201,144,0.12)]">
+        <div class="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+          <span class="h-2.5 w-2.5 rounded-full bg-mint" aria-hidden="true"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-white/25" aria-hidden="true"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-white/15" aria-hidden="true"></span>
+          <p class="ml-2 truncate text-xs tracking-wide text-white/50">dexscreener.com/solana/TBA</p>
+        </div>
+        <iframe
+          title="BASEDDOG chart on Dexscreener"
+          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=usd&interval=15&trades=0&info=0"
+          class="h-[440px] w-full border-0 md:h-[560px]"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-16">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-5 pb-10 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-md">
+        <a href="#top" class="inline-flex items-center gap-3">
+          <img src="logo.png" alt="" width="600" height="600" class="h-12 w-12" />
+          <span>
+            <span class="block font-display text-xl leading-none">Based Dog</span>
+            <span class="mt-1 block text-xs font-semibold tracking-[0.18em] text-mint">$BASEDDOG</span>
+          </span>
+        </a>
+        <p class="mt-4 text-white/70">Based Dog is here! Pure meme energy, fearless vibes, and one mission: take the charts to the moon.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://t.me/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on Telegram" class="h-11 w-11 overflow-hidden rounded-full ring-1 ring-white/15 transition hover:ring-mint">
+          <img src="tg.png" alt="" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="h-11 w-11 overflow-hidden rounded-xl bg-black ring-1 ring-white/15 transition hover:ring-mint">
+          <img src="x.png" alt="" class="h-full w-full object-cover" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Buy Now</a>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Chart</a>
+      </div>
+    </div>
+    <p class="px-5 pb-6 text-center text-xs text-white/40">Based Dog on Solana. Meme coin — do your own research.</p>
+    <svg class="block h-36 w-full sm:h-44" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#19225B" d="M0 90C180 30 320 130 520 80C740 24 860 120 1080 70C1260 30 1360 80 1440 50V220H0Z" />
+      <path fill="#141C4E" d="M0 130C220 80 400 170 680 120C960 70 1120 150 1440 110V220H0Z" />
+      <path fill="#0C1438" d="M0 170C260 140 480 200 760 165C1040 130 1240 185 1440 160V220H0Z" />
+      <g fill="#24316f">
+        <path d="M80 176l6-18 6 18z" />
+        <path d="M120 182l4-12 4 12z" />
+        <path d="M250 170l7-20 7 20z" />
+        <path d="M310 178l4-11 4 11z" />
+        <path d="M520 168l8-22 8 22z" />
+        <path d="M600 180l4-12 4 12z" />
+        <path d="M860 172l7-18 7 18z" />
+        <path d="M980 166l8-24 8 24z" />
+        <path d="M1100 178l5-14 5 14z" />
+        <path d="M1280 170l7-20 7 20z" />
+        <path d="M1360 180l4-12 4 12z" />
+      </g>
+    </svg>
+  </footer>
+
+  <script>
+    const ca = "TBA";
+    const copyStatus = document.getElementById("copyStatus");
+
+    async function copyCA(button) {
+      try {
+        await navigator.clipboard.writeText(ca);
+      } catch (err) {
+        const area = document.createElement("textarea");
+        area.value = ca;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+      }
+      if (!button.dataset.labelHtml) button.dataset.labelHtml = button.innerHTML;
+      button.textContent = "Copied";
+      copyStatus.textContent = "Contract address copied";
+      window.setTimeout(() => {
+        button.innerHTML = button.dataset.labelHtml;
+        copyStatus.textContent = "";
+      }, 1600);
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", (event) => copyCA(event.currentTarget));
+    document.getElementById("copyBtnAlt").addEventListener("click", (event) => copyCA(event.currentTarget));
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const iconOpen = document.getElementById("iconOpen");
+    const iconClose = document.getElementById("iconClose");
+
+    function setMenu(open) {
+      mobileMenu.classList.toggle("hidden", !open);
+      iconOpen.classList.toggle("hidden", open);
+      iconClose.classList.toggle("hidden", !open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
+    menuBtn.addEventListener("click", () => {
+      setMenu(menuBtn.getAttribute("aria-expanded") !== "true");
+    });
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenu(false));
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenu(false);
+    });
+  </script>
+</body>
+</html>
