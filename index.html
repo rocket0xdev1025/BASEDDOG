@@ -56,8 +56,13 @@
       inset: 0;
       z-index: -20;
       background:
-        radial-gradient(ellipse at 50% 100%, rgba(25, 34, 91, 0.55), transparent 58%),
-        linear-gradient(180deg, rgba(6, 15, 46, 0.55) 0%, rgba(6, 15, 46, 0.78) 38%, rgba(6, 15, 46, 0.9) 100%);
+        radial-gradient(ellipse at 50% 42%, rgba(6, 15, 46, 0.72), transparent 46%),
+        radial-gradient(ellipse at 50% 100%, rgba(25, 34, 91, 0.55), transparent 55%),
+        linear-gradient(180deg, rgba(6, 15, 46, 0.62) 0%, rgba(6, 15, 46, 0.84) 42%, rgba(6, 15, 46, 0.92) 100%);
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #01C990;
+      outline-offset: 3px;
     }
     .spark {
       transform-origin: center;
@@ -169,7 +174,7 @@
         <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="hidden h-10 w-10 overflow-hidden rounded-xl bg-black ring-1 ring-white/15 transition hover:ring-mint lg:block">
           <img src="x.png" alt="" width="554" height="554" class="h-full w-full object-cover" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint hidden items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold md:inline-flex">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-mint hidden items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold md:inline-flex">
           Buy Now
         </a>
         <button id="menuBtn" type="button" class="grid h-10 w-10 place-items-center rounded-xl border border-white/15 md:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
@@ -195,7 +200,7 @@
         <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="h-11 w-11 overflow-hidden rounded-xl bg-black ring-1 ring-white/15">
           <img src="x.png" alt="" class="h-full w-full object-cover" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex flex-1 items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Buy Now</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex flex-1 items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold">Buy Now</a>
       </div>
     </div>
   </header>
@@ -203,7 +208,7 @@
   <main id="top">
     <section class="relative" aria-label="Based Dog banner">
       <div class="relative">
-        <img src="banner.jpg" width="2448" height="816" alt="Based Dog sitting in a dark night field under stars and a crescent moon" class="block h-auto w-full" />
+        <img src="banner.jpg" width="2448" height="816" alt="Based Dog sitting in a dark night field under stars and a crescent moon" class="block h-[250px] w-full object-cover object-center sm:h-[340px] md:h-auto" />
         <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-night sm:h-32"></div>
       </div>
 
@@ -220,21 +225,23 @@
                 </span>
                 Solana · $BASEDDOG
               </p>
-              <h1 class="mt-4 flex items-center justify-center gap-3 font-display text-5xl leading-none tracking-tight sm:text-6xl lg:text-7xl md:justify-start">
-                Based Dog
-                <span class="ball mt-2 inline-block h-4 w-4 rounded-full bg-mint sm:h-5 sm:w-5" aria-hidden="true"></span>
+              <h1 class="mt-4 font-display text-[2.5rem] leading-none tracking-tight min-[400px]:text-5xl sm:text-6xl lg:text-7xl">
+                <span class="whitespace-nowrap">
+                  Based Dog
+                  <span class="ball ml-1 inline-block h-3.5 w-3.5 translate-y-0.5 rounded-full bg-mint align-middle sm:ml-2 sm:h-5 sm:w-5" aria-hidden="true"></span>
+                </span>
               </h1>
               <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl md:mx-0">
                 Based Dog is here! Pure meme energy, fearless vibes, and one mission: take the charts to the moon.
               </p>
               <div class="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center md:justify-start">
-                <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
+                <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
                   Buy Now
                   <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
                     <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
+                <a href="https://dexscreener.com/solana/FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display text-lg">
                   Chart
                 </a>
                 <div class="flex items-center justify-center gap-2.5 sm:ml-1">
@@ -250,7 +257,7 @@
               <div class="mt-6 flex flex-col gap-3 rounded-2xl border border-white/10 bg-black/50 p-3 sm:flex-row sm:items-center sm:justify-between sm:pl-4">
                 <div class="min-w-0 text-left">
                   <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-mint">Contract address</p>
-                  <p id="caValue" class="truncate font-mono text-base text-white sm:text-lg">TBA</p>
+                  <p id="caValue" class="truncate font-mono text-base text-white sm:text-lg">FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump</p>
                 </div>
                 <button id="copyBtn" type="button" class="btn-ghost shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold">
                   Copy
@@ -337,7 +344,7 @@
           </p>
         </div>
         <button id="copyBtnAlt" type="button" class="btn-ghost inline-flex items-center justify-center gap-2 self-start rounded-full px-5 py-2.5 text-sm font-semibold">
-          Copy CA · <span class="font-mono text-mint">TBA</span>
+          Copy CA · <span class="font-mono text-mint">FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump</span>
         </button>
       </div>
 
@@ -366,8 +373,8 @@
       </ol>
 
       <div class="mt-8 flex flex-col items-start justify-between gap-4 rounded-[1.75rem] border border-mint/25 bg-mint/10 px-6 py-5 sm:flex-row sm:items-center">
-        <p class="text-white/85">Contract stays <span class="font-mono font-semibold text-mint">TBA</span>. Copy it, then buy with the pack.</p>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-lg">
+        <p class="text-white/85">Contract stays <span class="font-mono font-semibold text-mint">FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump</span>. Copy it, then buy with the pack.</p>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-lg">
           Buy Now
           <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
             <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
@@ -383,7 +390,7 @@
           <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Chart</h2>
           <p class="mt-4 max-w-xl text-lg text-white/75">The live $BASEDDOG chart, parked under the same night sky. Watch the field move.</p>
         </div>
-        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 self-start rounded-full px-6 py-3 font-display text-lg">
+        <a href="https://dexscreener.com/solana/FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center justify-center gap-2 self-start rounded-full px-6 py-3 font-display text-lg">
           Chart
           <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
             <path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
@@ -396,11 +403,11 @@
           <span class="h-2.5 w-2.5 rounded-full bg-mint" aria-hidden="true"></span>
           <span class="h-2.5 w-2.5 rounded-full bg-white/25" aria-hidden="true"></span>
           <span class="h-2.5 w-2.5 rounded-full bg-white/15" aria-hidden="true"></span>
-          <p class="ml-2 truncate text-xs tracking-wide text-white/50">dexscreener.com/solana/TBA</p>
+          <p class="ml-2 truncate text-xs tracking-wide text-white/50">dexscreener.com/solana/FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump</p>
         </div>
         <iframe
           title="BASEDDOG chart on Dexscreener"
-          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=usd&interval=15&trades=0&info=0"
+          src="https://dexscreener.com/solana/FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=usd&interval=15&trades=0&info=0"
           class="h-[440px] w-full border-0 md:h-[560px]"
           loading="lazy"
         ></iframe>
@@ -427,8 +434,8 @@
         <a href="https://x.com/BasedDogSol" target="_blank" rel="noopener noreferrer" aria-label="Based Dog on X" class="h-11 w-11 overflow-hidden rounded-xl bg-black ring-1 ring-white/15 transition hover:ring-mint">
           <img src="x.png" alt="" class="h-full w-full object-cover" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Buy Now</a>
-        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Chart</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&amp;output=FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-mint inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Buy Now</a>
+        <a href="https://dexscreener.com/solana/FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump" target="_blank" rel="noopener noreferrer" class="btn-ghost inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold">Chart</a>
       </div>
     </div>
     <p class="px-5 pb-6 text-center text-xs text-white/40">Based Dog on Solana. Meme coin — do your own research.</p>
@@ -453,7 +460,7 @@
   </footer>
 
   <script>
-    const ca = "TBA";
+    const ca = "FYYFzYEg1m7TYCXRj6tbdaTc8opFzd1r1SKjv4EBpump";
     const copyStatus = document.getElementById("copyStatus");
 
     async function copyCA(button) {
